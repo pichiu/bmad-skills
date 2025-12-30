@@ -8,8 +8,9 @@ Skills 是教導 Claude 如何執行特定任務的 markdown 檔案。當你將 
 
 > 這些 Skills 專為 **Claude.ai 網頁介面**設計。透過將結構化指示加入對話或專案中，讓 Claude 能夠扮演專業角色並執行特定工作流程。
 
-更多關於 Skills 的資訊，請參閱官方文件：
+更多關於 Skills 的資訊，請參閱：
 
+- **[Skills 完整指南（繁體中文）](docs/skills-guide-zh-tw.md)** — 本專案整理的中文版指南
 - [Agent Skills 概覽](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
 - [快速入門指南](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/quickstart)
 - [最佳實踐](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices)
