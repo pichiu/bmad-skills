@@ -1,11 +1,11 @@
 ---
 name: bmad-brainstorming
-description: AI 創意教練腦力激盪。當用戶說「brainstorming」、「腦力激盪」、「創意思考」、「想點子」、「發想」、「brainstorm」、「一起來想」、「幫我想」、「集思廣益」、「ideation」、「創意發想」時啟動。提供 61 種創意技術，由 AI 智能推薦最適合的組合，以教練式對話引導創意探索。適用於：創新發想、問題解決、策略規劃、團隊凝聚、打破框架、個人洞察。
+description: AI 創意教練腦力激盪。當用戶說「brainstorming」、「腦力激盪」、「創意思考」、「想點子」、「發想」、「brainstorm」、「一起來想」、「幫我想」、「集思廣益」、「ideation」、「創意發想」時啟動。提供十大類別創意技術庫，由 AI 智能推薦最適合的組合，以教練式對話引導創意探索。適用於：創新發想、問題解決、策略規劃、團隊凝聚、打破框架、個人洞察。
 ---
 
 # BMad Brainstorming
 
-AI 創意教練，使用 61 種經過驗證的創意技術引導腦力激盪。
+AI 創意教練，運用十大類別創意技術引導腦力激盪。
 
 ## 核心角色：創意教練
 
@@ -25,10 +25,66 @@ AI 創意教練，使用 61 種經過驗證的創意技術引導腦力激盪。
 
 ---
 
+## Goal Mapping
+
+### 依目標選擇
+| 用戶目標 | 推薦類別 |
+|----------|----------|
+| 創新/新點子 | Creative, Wild, Theatrical |
+| 解決問題 | Deep, Structured |
+| 團隊凝聚 | Collaborative |
+| 個人洞察 | Introspective |
+| 策略規劃 | Structured, Deep |
+| 打破框架 | Wild, Theatrical, Creative |
+| 系統性探索 | Structured, Deep |
+| 永續方案 | Biomimetic, Cultural |
+
+### 依複雜度
+| 主題類型 | 推薦方向 |
+|----------|----------|
+| 複雜/抽象 | Deep, Structured |
+| 熟悉/具體 | Creative, Wild |
+| 情感/個人 | Introspective |
+
+### 依能量風格
+| 用戶語言風格 | 推薦技術 |
+|-------------|----------|
+| 正式/分析型 | Structured, Deep |
+| 活潑/有能量 | Creative, Theatrical, Wild |
+| 反思/沉穩 | Introspective, Deep |
+
+### 互補組合建議
+| 主要類別 | 建議搭配 | 原因 |
+|----------|----------|------|
+| Deep | + Creative | 分析後需要創意突破 |
+| Wild | + Structured | 狂野發想後需要收斂整理 |
+| Introspective | + Collaborative | 個人洞察後需要外部驗證 |
+| Creative | + Deep | 創意發散後需要深度檢驗 |
+| Theatrical | + Structured | 戲劇探索後需要實際規劃 |
+
+---
+
+## 技術類別索引
+
+| 類別 | Icon | 檔案 | 特色 |
+|------|------|------|------|
+| Collaborative | 🤝 | `references/collaborative.md` | 團隊協作、多元觀點 |
+| Creative | 💡 | `references/creative.md` | 創新、打破框架 |
+| Deep | 🔍 | `references/deep.md` | 根因分析、系統探索 |
+| Structured | 📊 | `references/structured.md` | 框架方法、系統分析 |
+| Introspective | 🧘 | `references/introspective.md` | 內在探索、價值澄清 |
+| Theatrical | 🎭 | `references/theatrical.md` | 角色扮演、視角轉換 |
+| Wild | 🌪️ | `references/wild.md` | 極端思維、突破邊界 |
+| Biomimetic | 🌿 | `references/biomimetic.md` | 仿生思維、自然智慧 |
+| Quantum | ⚛️ | `references/quantum.md` | 量子啟發、不確定性 |
+| Cultural | 🌍 | `references/cultural.md` | 跨文化智慧、融合思維 |
+
+---
+
 ## 流程
 
 ```
-啟動 → 收集主題/目標 → 讀取技術庫 → AI 推薦技術 → 教練式執行 → 總結收尾
+啟動 → 收集主題/目標 → 分析選擇類別 → 載入技術 → 教練式執行 → 總結收尾
 ```
 
 ### Step 1: 啟動
@@ -38,7 +94,7 @@ AI 創意教練，使用 61 種經過驗證的創意技術引導腦力激盪。
 ```
 🧠 歡迎來到腦力激盪！
 
-我是你的創意教練，準備了 61 種創意技術來協助你。
+我是你的創意教練，準備了十大類別的創意技術來協助你。
 我會根據你的目標智能推薦最適合的組合。
 
 **讓我們開始吧！**
@@ -47,22 +103,13 @@ AI 創意教練，使用 61 種經過驗證的創意技術引導腦力激盪。
 2. 這次希望獲得什麼樣的成果？
 ```
 
-### Step 2: 讀取技術庫 & 推薦技術
+### Step 2: 分析選擇 & 載入技術
 
 收到用戶目標後：
 
-1. **讀取** `references/techniques.md` 取得 Goal Mapping 和 61 種技術資料
-2. **分析**用戶目標，根據 Goal Mapping 選擇最適合的類別
+1. **分析**用戶目標，根據 Goal Mapping 選擇最適合的類別
+2. **載入**對應類別的技術檔案（只載入需要的類別）
 3. **推薦** 2-3 個互補技術組合
-
-**快速選擇原則：**
-| 用戶目標類型 | 推薦方向 |
-|-------------|----------|
-| 發散/創新 | Creative, Wild, Theatrical |
-| 收斂/解決 | Deep, Structured |
-| 團隊協作 | Collaborative |
-| 個人洞察 | Introspective |
-| 永續/系統 | Biomimetic, Cultural, Quantum |
 
 **推薦格式：**
 ```
@@ -143,25 +190,6 @@ AI 創意教練，使用 61 種經過驗證的創意技術引導腦力激盪。
 
 有什麼想法想要再深入探討嗎？
 ```
-
----
-
-## 技術類別索引
-
-| 類別 | Icon | 數量 | 特色 |
-|------|------|------|------|
-| Collaborative | 🤝 | 5 | 團隊協作、多元觀點 |
-| Creative | 💡 | 11 | 創新、打破框架 |
-| Deep | 🔍 | 8 | 根因分析、系統探索 |
-| Structured | 📊 | 7 | 框架方法、系統分析 |
-| Introspective | 🧘 | 6 | 內在探索、價值澄清 |
-| Theatrical | 🎭 | 6 | 角色扮演、視角轉換 |
-| Wild | 🌪️ | 8 | 極端思維、突破邊界 |
-| Biomimetic | 🌿 | 3 | 仿生思維、自然智慧 |
-| Quantum | ⚛️ | 3 | 量子啟發、不確定性 |
-| Cultural | 🌍 | 4 | 跨文化智慧、融合思維 |
-
-**完整技術資料：** `references/techniques.md`
 
 ---
 
